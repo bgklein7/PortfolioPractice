@@ -1,0 +1,41 @@
+﻿.container{
+    display: flex;
+}
+body, html {
+    height: 100%;
+}
+.parallax {
+    /* The image used */
+    background-image: url('ImageRepository/4884543-books-wallpaper.jpg');
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:1000px;
+}
+.header {
+    color: white;
+    background-color: black;
+    font-size: 36px;
+}
+.parallax2 {
+    /* The image used */
+    background-image: url('ImageRepository/4064561-hipster-wallpaper.jpg');
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+
+}
+.about {
+    color: white;
+    background-color: black;
+    font-size: 36px;
+}
