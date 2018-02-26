@@ -152,6 +152,9 @@ body {
     margin-top: 100px;
     margin-left: 50px;
     max-width: 750px;
+    min-width: 650px;
+    min-height: 500px;
+    max-height: 650px;
     overflow: auto;
 }
 .aboutme p{
