@@ -1,30 +1,140 @@
 ﻿.container{
-    display: flex;
+    display: grid;
+  
 }
+
 body, html {
     height: 100%;
 }
-.parallax {
-    /* The image used */
-    background-image: url('ImageRepository/4884543-books-wallpaper.jpg');
-    /* Full height */
-    height: 100%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:1000px;
-}
-.header {
-    color: white;
-    background-color: black;
+h1{
     font-size: 36px;
+    text-transform: lowercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
-.parallax2 {
-    /* The image used */
-    background-image: url('ImageRepository/4064561-hipster-wallpaper.jpg');
-    /* Full height */
+h2{
+    font-size: 32px;
+    text-transform: lowercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+div.nav-title a{
+    color: white;
+    text-decoration-line: none;
+}
+div.nav-title a:hover{
+    color: red;
+}
+
+body {
+    margin: 0px;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav > .nav-header {
+        display: inline;
+    }
+
+.nav > .nav-header > .nav-title {
+            display: inline-block;
+            font-size: 22px;
+            color: #fff;
+            padding: 10px 10px 10px 10px;
+        }
+
+.nav > .nav-btn {
+        display: none;
+    }
+
+.nav > .nav-links {
+        display: inline;
+        float: right;
+        font-size: 18px;
+    }
+
+.nav > .nav-links > a {
+            display: inline-block;
+            padding: 13px 10px 13px 10px;
+            text-decoration: none;
+            color: #efefef;
+        }
+
+.nav > .nav-links > a:hover {
+                color: yellow;
+            }
+
+.nav > #nav-check {
+        display: none;
+    }
+
+@media (max-width:600px) {
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+        .nav > .nav-btn > label {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            padding: 13px;
+        }
+
+            .nav > .nav-btn > label:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .nav > .nav-btn > label > span {
+                display: block;
+                width: 25px;
+                height: 10px;
+                border-top: 2px solid #eee;
+            }
+
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+        .nav > .nav-links > a {
+            display: block;
+            width: 100%;
+        }
+
+    .nav > #nav-check:not(:checked) + .nav-links {
+        height: 0px;
+    }
+
+    .nav > #nav-check:checked + .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+.parallax {
+    display: flex;
+    flex-direction: column;
+    background-image: url('ImageRepository/4884543-books-wallpaper.jpg');
     height: 100%;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -32,10 +142,232 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     height: 1000px;
+}
+.aboutme {
+    display: flex;
+    flex-direction:column;
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    margin-top: 100px;
+    margin-left: 50px;
+    max-width: 750px;
+    overflow: auto;
+}
+.aboutme p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.aboutme h1{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+#headshot{
+    max-width: 100px;
+    margin-left: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.sigline{
+    flex-direction: row;
+}
+#signature{
+    max-width: 250px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+.languages{
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    margin-left: 700px;
+    max-width: 575px;
+    max-height: 250px;
+    min-height: 150px;
+    overflow: auto;
+}
+#skills{
+    margin-left: 5px;
+    margin-top: 5px;
+    max-height: 84px;
 
 }
-.about {
+.skillList1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-height: 64px;
+
+}
+
+.parallax2 {
+
+    background-image: url('ImageRepository/4064561-hipster-wallpaper.jpg');
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1250px;
+
+}
+
+.project1 {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    margin-top: 0px;
+    min-height: 310px;
+    max-height: 400px;
+}
+
+.project1 a img{
+    max-height: 90px;
+    max-width: 90px;
+}
+#flipperone {
+    position: relative;
+    max-height: 300px;
+    max-width: 560px;
+    margin: 5px;
+}
+
+    #flipperone img {
+        position: absolute;
+        left: 0;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+    }
+
+        #flipperone img.top:hover {
+            opacity: 0;
+        }
+
+.projectone {
+    margin-top: 5px;
+    margin-left: 570px;
+    margin-right: 5px;
+    max-height: 300px;
+    overflow: auto;
+}
+.project2 {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    margin-top: 0px;
+    min-height: 310px;
+}
+.project2 a img {
+    max-height: 90px;
+    max-width: 90px;
+}
+#flippertwo {
+    position: relative;
+    max-height: 300px;
+    max-width: 560px;
+    margin: 5px;
+}
+
+    #flippertwo img {
+        position: absolute;
+        left: 0;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+    }
+
+        #flippertwo img.top:hover {
+            opacity: 0;
+        }
+
+.projecttwo {
+margin: 5px;
+max-width: 750px;
+max-height: 300px;
+overflow: auto;
+}
+.project3 {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    margin-top: 0px;
+    min-height: 310px;
+    max-height: 400px;
+}
+.project3 a img {
+    max-height: 90px;
+    max-width: 90px;
+}
+
+#flipperthree {
+    position: relative;
+    max-height: 300px;
+    max-width: 560px;
+    margin: 5px;
+}
+#flipperthree img {
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+#flipperthree img.top:hover {
+    opacity: 0;
+}
+.projectthree {
+    margin-left: 570px;
+    margin-right: 5px;
+    margin-top: 5px;
+    max-height: 300px;
+    overflow: auto;
+}
+.parallax3 {
+    background-image: url('ImageRepository/6014513-wallpaper-black-and-white.jpg');
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.contactinfo {
+    display: flex;
     color: white;
     background-color: black;
     font-size: 36px;
+    flex-direction: row;
+    min-height: 200px;
+    max-height: 400px;
+    justify-content: center;
+}
+.contacttext{
+    flex-direction: column;
+    max-width: 500px;
+    min-width: 400px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.contactlinks{
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 40px;
+    justify-content: space-between;
+    min-width: 400px;
 }
